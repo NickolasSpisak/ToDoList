@@ -1,7 +1,5 @@
-import { bindActionCreators } from "redux";
-
-export const reducer = (state, action) => {
-  switch (((state = []), action.type)) {
+export default (posts = [], action) => {
+  switch (action.type) {
     case "FETCH_ALL":
       return action.payload;
     case "CREATE":

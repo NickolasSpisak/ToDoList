@@ -14,6 +14,16 @@ import {
   ModalBody,
   ModalFooter,
 } from "reactstrap";
+import {
+  Container,
+  AppBar,
+  Typography,
+  Grow,
+  Grid,
+  TextField,
+  Classes,
+  Clear,
+} from "@mui/material";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useDispatch } from "react-redux";
@@ -54,7 +64,7 @@ const Detailed = () => {
                   autoComplete="off"
                   noValidate
                   onClick={handleSubmit()}
-                  classname={`${classes.root} ${classes.form}`}
+                  // classname={`${classes.root} ${classes.form}`}
                 >
                   <Typography variant="h6">Detailed To Do List</Typography>
                   <TextField
@@ -93,7 +103,7 @@ const Detailed = () => {
                       setPostData({ ...postData, tags: e.target.value })
                     }
                   />
-                  <div className={classes.fileInput}>
+                  <div>
                     <FileBase
                       type="file"
                       multiple={false}
@@ -110,7 +120,7 @@ const Detailed = () => {
         <ModalFooter>
           <div className="align-self-left">
             <Button
-              className={classes.buttonSubmit}
+              // className={classes.buttonSubmit}
               varient="container"
               color="secondary"
               size="large"
@@ -119,11 +129,11 @@ const Detailed = () => {
               Submit
             </Button>
             <Button
-              className={classes.buttonSubmit}
+              // className={classes.buttonSubmit}
               varient="contained"
               color="secondary"
               size="small"
-              onClick={clear}
+              // onClick={clear}
             >
               Clear
             </Button>
